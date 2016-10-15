@@ -132,6 +132,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccessoriesStuffsController.cs" />
     <Compile Include="Controllers\BottomStuffsController.cs" />
+    <Compile Include="Controllers\ClothingMainsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ShoeStuffsController.cs" />
     <Compile Include="Controllers\TopStuffsController.cs" />
@@ -245,6 +246,11 @@
     <Content Include="Views\TopStuffs\Details.cshtml" />
     <Content Include="Views\TopStuffs\Edit.cshtml" />
     <Content Include="Views\TopStuffs\Index.cshtml" />
+    <Content Include="Views\ClothingMains\Create.cshtml" />
+    <Content Include="Views\ClothingMains\Delete.cshtml" />
+    <Content Include="Views\ClothingMains\Details.cshtml" />
+    <Content Include="Views\ClothingMains\Edit.cshtml" />
+    <Content Include="Views\ClothingMains\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Wardrobe1.Models.ClothingMain>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TopStuff)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BottomStuff)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShoeStuff)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AccessoriesStuff)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TopStuff.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BottomStuff.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShoeStuff.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccessoriesStuff.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ClothingID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ClothingID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ClothingID })
+        </td>
+    </tr>
+}
+
+</table>
