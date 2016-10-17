@@ -205,11 +205,13 @@
     <Content Include="Pictures\Shoes\9040332488734.jpg" />
     <Content Include="Pictures\Shoes\blac-crocs_thumb.jpg" />
     <Content Include="Pictures\Shoes\dress-shoes-black-calfskin-leather-tall-men-s-dress-shoes-with-lifts-95-2.jpg" />
+    <Content Include="Pictures\Shoes\DressShoes.jpg" />
     <Content Include="Pictures\Tops\Dark-Green-Pants-Men-dqhljkcdctr.jpg" />
     <Content Include="Pictures\Tops\iWspDE6e.jpg" />
     <Content Include="Pictures\Tops\n320-white-shirts.jpg" />
     <Content Include="Pictures\Tops\rednek-shirt-rlj-lumberjack-shirt-red-black.jpg" />
     <Content Include="Pictures\Tops\RipNDip-Lord-Nermal-Pocket-T-Shirt-_261664-front.jpg" />
+    <Content Include="Pictures\Tops\RipNDip.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Models\Model1.edmx">

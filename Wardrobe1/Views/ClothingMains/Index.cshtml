@@ -4,8 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
+<h2>Outfits</h2>
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -27,42 +26,36 @@
     </tr>
 </table>*@
 
-    
-        @foreach (var item in Model)
-        {
-            <div class="row">
-                <div class="col-md-4" id="reviewIndex">
+   
+    @foreach (var item in Model)
+    {
+        <div class="row">
+            <div class="container">
+                <div class="col-xs-6 col-md-4">
                     <div class="thumbnail">
                         @Html.DisplayFor(modelItem => item.TopStuff.Name)
-                        @if (item.TopStuff.Name == "Kitty T-shirt")
-                        {
-                            <p><img src="~/Pictures/Tops/RipNDip-Lord-Nermal-Pocket-T-Shirt-_261664-front.jpg" /></p>
-                        }
+                        <img src="@Url.Content(item.TopStuff.Photo)" />
                     </div>
+
                     <div class="thumbnail">
                         @Html.DisplayFor(modelItem => item.BottomStuff.Name)
-                        @if (item.BottomStuff.Name == "Levi's jeans")
-                        {
-                            <p><img src="~/Pictures/Bottoms/045114406-2014-fall-front-pdp.jpg" /></p>
-                        }
+                        <img src="@Url.Content(item.BottomStuff.Photo)" />
                     </div>
                     <div class="thumbnail">
                         @Html.DisplayFor(modelItem => item.ShoeStuff.Name)
-                        @if (item.ShoeStuff.Name == "Vans")
-                        {
-                            <p><img src="~/Pictures/Shoes/9040332488734.jpg" /></p>
-                        }
+                        <img src="@Url.Content(item.ShoeStuff.Photo)" />
                     </div>
+
                     <div class="thumbnail">
                         @Html.DisplayFor(modelItem => item.AccessoriesStuff.Name)
-                        @if (item.AccessoriesStuff.Name == "Supreme beanie")
-                        {
-                            <p><img src="~/Pictures/Accessories/x354-q80.jpg" /></p>
-                        }
+                        <img src="@Url.Content(item.AccessoriesStuff.Photo)" />
+
+
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ClothingID })
+                        @Html.ActionLink("Details", "Details", new { id = item.ClothingID })
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ClothingID })
                     </div>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ClothingID })
-                    @Html.ActionLink("Details", "Details", new { id = item.ClothingID })
-                    @Html.ActionLink("Delete", "Delete", new { id = item.ClothingID })
                 </div>
             </div>
-        }
+        </div>
+    }
