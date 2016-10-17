@@ -26,36 +26,29 @@
     </tr>
 </table>*@
 
-   
+ <div class="row">
     @foreach (var item in Model)
     {
-        <div class="row">
-            <div class="container">
-                <div class="col-xs-6 col-md-4">
-                    <div class="thumbnail">
-                        @Html.DisplayFor(modelItem => item.TopStuff.Name)
-                        <img src="@Url.Content(item.TopStuff.Photo)" />
-                    </div>
+        <div class="container">
+            <div class="col-xs-6 col-md-3 col-lg-3">
+                <div class="thumbnail">
+                    @Html.DisplayFor(modelItem => item.TopStuff.Name)
+                    <img src="@Url.Content(item.TopStuff.Photo)" />
 
-                    <div class="thumbnail">
-                        @Html.DisplayFor(modelItem => item.BottomStuff.Name)
-                        <img src="@Url.Content(item.BottomStuff.Photo)" />
-                    </div>
-                    <div class="thumbnail">
-                        @Html.DisplayFor(modelItem => item.ShoeStuff.Name)
-                        <img src="@Url.Content(item.ShoeStuff.Photo)" />
-                    </div>
+                    @Html.DisplayFor(modelItem => item.BottomStuff.Name)
+                    <img src="@Url.Content(item.BottomStuff.Photo)" />
 
-                    <div class="thumbnail">
-                        @Html.DisplayFor(modelItem => item.AccessoriesStuff.Name)
-                        <img src="@Url.Content(item.AccessoriesStuff.Photo)" />
+                    @Html.DisplayFor(modelItem => item.ShoeStuff.Name)
+                    <img src="@Url.Content(item.ShoeStuff.Photo)" />
 
+                    @Html.DisplayFor(modelItem => item.AccessoriesStuff.Name)
+                    <img src="@Url.Content(item.AccessoriesStuff.Photo)" />
 
-                        @Html.ActionLink("Edit", "Edit", new { id = item.ClothingID })
-                        @Html.ActionLink("Details", "Details", new { id = item.ClothingID })
-                        @Html.ActionLink("Delete", "Delete", new { id = item.ClothingID })
-                    </div>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ClothingID })
+                    @Html.ActionLink("Details", "Details", new { id = item.ClothingID })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ClothingID })
                 </div>
             </div>
         </div>
     }
+</div>

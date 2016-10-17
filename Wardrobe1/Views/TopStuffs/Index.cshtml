@@ -34,17 +34,17 @@
 <div class="row">
     @foreach (var item in Model)
     {
-            <div class="col-xs-6 col-md-3">
+        <div class="col-xs-6 col-md-3">
+            <div class="container">
                 @Html.DisplayFor(modelItem => item.Name)
                 <img src="@Url.Content(item.Photo)" />
-                @Html.DisplayFor(modelItem => item.Type)
-                @Html.DisplayFor(modelItem => item.Color)
-                @Html.DisplayFor(modelItem => item.Season)
-                @Html.DisplayFor(modelItem => item.Occasion)
-
-                @Html.ActionLink("Edit", "Edit", new { id = item.TopsID })
-                @Html.ActionLink("Details", "Details", new { id = item.TopsID })
-                @Html.ActionLink("Delete", "Delete", new { id = item.TopsID })
+                <p>
+                    <br />
+                    @Html.ActionLink("Edit", "Edit", new { id = item.TopsID })
+                    @Html.ActionLink("Details", "Details", new { id = item.TopsID })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.TopsID })
+                </p>
             </div>
+        </div>
     }
 </div>
