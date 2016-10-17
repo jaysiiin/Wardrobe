@@ -9,7 +9,7 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+@*<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.TopStuff)
@@ -25,29 +25,45 @@
         </th>
         <th></th>
     </tr>
-</table>
+</table>*@
 
-    <div class="row">
+    
         @foreach (var item in Model)
         {
-            <div class="col-md-4" id="reviewIndex">
-                <div class="caption">
-                    @Html.DisplayFor(modelItem => item.TopStuff.Name)
-                    @if (item.TopStuff.Name == "Kitty T-shirt")
-                    {
-                        <p id="kitty"><img src="~/Pictures/Tops/RipNDip-Lord-Nermal-Pocket-T-Shirt-_261664-front.jpg" /></p>
-                    }
-
-                    @Html.DisplayFor(modelItem => item.BottomStuff.Name)
-
-                    @Html.DisplayFor(modelItem => item.ShoeStuff.Name)
-
-                    @Html.DisplayFor(modelItem => item.AccessoriesStuff.Name)
-
+            <div class="row">
+                <div class="col-md-4" id="reviewIndex">
+                    <div class="thumbnail">
+                        @Html.DisplayFor(modelItem => item.TopStuff.Name)
+                        @if (item.TopStuff.Name == "Kitty T-shirt")
+                        {
+                            <p><img src="~/Pictures/Tops/RipNDip-Lord-Nermal-Pocket-T-Shirt-_261664-front.jpg" /></p>
+                        }
+                    </div>
+                    <div class="thumbnail">
+                        @Html.DisplayFor(modelItem => item.BottomStuff.Name)
+                        @if (item.BottomStuff.Name == "Levi's jeans")
+                        {
+                            <p><img src="~/Pictures/Bottoms/045114406-2014-fall-front-pdp.jpg" /></p>
+                        }
+                    </div>
+                    <div class="thumbnail">
+                        @Html.DisplayFor(modelItem => item.ShoeStuff.Name)
+                        @if (item.ShoeStuff.Name == "Vans")
+                        {
+                            <p><img src="~/Pictures/Shoes/9040332488734.jpg" /></p>
+                        }
+                    </div>
+                    <div class="thumbnail">
+                        @Html.DisplayFor(modelItem => item.AccessoriesStuff.Name)
+                        @if (item.AccessoriesStuff.Name == "Supreme beanie")
+                        {
+                            <p><img src="~/Pictures/Accessories/x354-q80.jpg" /></p>
+                        }
+                    </div>
                     @Html.ActionLink("Edit", "Edit", new { id = item.ClothingID })
                     @Html.ActionLink("Details", "Details", new { id = item.ClothingID })
                     @Html.ActionLink("Delete", "Delete", new { id = item.ClothingID })
-               </div>     
-           </div>
-                    }
-     </div>
+                </div>
+            </div>
+        }
+           
