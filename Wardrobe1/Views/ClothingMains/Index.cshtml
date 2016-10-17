@@ -25,27 +25,29 @@
         </th>
         <th></th>
     </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TopStuff.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BottomStuff.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShoeStuff.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AccessoriesStuff.Name)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ClothingID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ClothingID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ClothingID })
-        </td>
-    </tr>
-}
-
 </table>
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4" id="reviewIndex">
+                <div class="caption">
+                    @Html.DisplayFor(modelItem => item.TopStuff.Name)
+                    @if (item.TopStuff.Name == "Kitty T-shirt")
+                    {
+                        <p id="kitty"><img src="~/Pictures/Tops/RipNDip-Lord-Nermal-Pocket-T-Shirt-_261664-front.jpg" /></p>
+                    }
+
+                    @Html.DisplayFor(modelItem => item.BottomStuff.Name)
+
+                    @Html.DisplayFor(modelItem => item.ShoeStuff.Name)
+
+                    @Html.DisplayFor(modelItem => item.AccessoriesStuff.Name)
+
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ClothingID })
+                    @Html.ActionLink("Details", "Details", new { id = item.ClothingID })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ClothingID })
+               </div>     
+           </div>
+                    }
+     </div>
