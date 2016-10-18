@@ -86,10 +86,17 @@ h2{
 }
 #crudLink{
     font-family: 'Nothing You Could Do', cursive;
+    font-size:20px;
 }
 #crudLink:link{
-    color:black;
-        /*this code was a bit werid, it works here and there*/
+    color:white;
+}
+#crudLink:visited{
+    color:white;
+}
+.btn:hover{
+    background-color:transparent;
+    text-decoration-style:none;
 }
 /*^^^^^^^^^^^^^^GENERAL CRUD TAGS^^^^^^^^^^^^^^*/
 

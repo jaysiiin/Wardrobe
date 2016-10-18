@@ -40,9 +40,15 @@
                 <img src="@Url.Content(item.Photo)" />
                 <p>
                     <br />
-                        @Html.ActionLink("Edit", "Edit", new { id = item.AccessoriesID }, new { id = "crudLink" }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.AccessoriesID }, new { id = "crudLink" }) |
+                    <div class="btn btn-primary" role="button">
+                        @Html.ActionLink("Edit", "Edit", new { id = item.AccessoriesID }, new { id = "crudLink" })
+                    </div>
+                    <div class="btn btn-primary" role="button">
+                        @Html.ActionLink("Details", "Details", new { id = item.AccessoriesID }, new { id = "crudLink" })
+                    </div>
+                    <div class="btn btn-primary" role="button">
                         @Html.ActionLink("Delete", "Delete", new { id = item.AccessoriesID }, new { id = "crudLink" })
+                    </div>
                 </p>
             </div>
         </div>
