@@ -89,10 +89,16 @@ h2{
 }
 #crudLink:link{
     color:black;
+        /*this code was a bit werid, it works here and there*/
 }
 /*^^^^^^^^^^^^^^GENERAL CRUD TAGS^^^^^^^^^^^^^^*/
 
-
+footer{
+    color:black;
+    font-size:40px;
+    font-family: 'Herr Von Muellerhoff', cursive;
+    font-weight:bold;
+}
 
 
 

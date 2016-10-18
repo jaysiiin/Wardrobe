@@ -9,45 +9,51 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 @*<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.TopStuff)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BottomStuff)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoeStuff)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AccessoriesStuff)
-        </th>
-        <th></th>
-    </tr>
-</table>*@
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TopStuff)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BottomStuff)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShoeStuff)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccessoriesStuff)
+            </th>
+            <th></th>
+        </tr>
+    </table>*@
 
- <div class="row">
+<div class="row">
     @foreach (var item in Model)
     {
-            <div class="col-xs-6 col-md-4">
-                <div class="thumbnail">
-                    <br/>
-                        @Html.DisplayFor(modelItem => item.TopStuff.Name)
-                        <img src="@Url.Content(item.TopStuff.Photo)" />
-                    <br/>
-                        @Html.DisplayFor(modelItem => item.BottomStuff.Name)
-                        <img src="@Url.Content(item.BottomStuff.Photo)" />
-                    <br/>
-                        @Html.DisplayFor(modelItem => item.ShoeStuff.Name)
-                        <img src="@Url.Content(item.ShoeStuff.Photo)" />
-                    <br/>
-                        @Html.DisplayFor(modelItem => item.AccessoriesStuff.Name)
-                        <img src="@Url.Content(item.AccessoriesStuff.Photo)" />
-                    <br />
-                        @Html.ActionLink("Edit", "Edit", new { id = item.ClothingID }, new { id = "crudLink" }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.ClothingID }, new { id = "crudLink" }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.ClothingID }, new { id = "crudLink" })
+        <div class="col-xs-6 col-md-4">
+            <div class="thumbnail">
+                <br />
+                @Html.DisplayFor(modelItem => item.TopStuff.Name)
+                <img src="@Url.Content(item.TopStuff.Photo)" />
+                <br />
+                @Html.DisplayFor(modelItem => item.BottomStuff.Name)
+                <img src="@Url.Content(item.BottomStuff.Photo)" />
+                <br />
+                @Html.DisplayFor(modelItem => item.ShoeStuff.Name)
+                <img src="@Url.Content(item.ShoeStuff.Photo)" />
+                <br />
+                @Html.DisplayFor(modelItem => item.AccessoriesStuff.Name)
+                <img src="@Url.Content(item.AccessoriesStuff.Photo)" />
+                <br />
+                <div class="btn btn-primary" role="button">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ClothingID }, new { id = "crudLink" })
+                </div>
+                <div class="btn btn-primary" role="button">
+                    @Html.ActionLink("Details", "Details", new { id = item.ClothingID }, new { id = "crudLink" })
+                </div>
+                <div class="btn btn-primary" role="button">
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ClothingID }, new { id = "crudLink" })
+                </div>
                 </div>
             </div>
-    }
-</div>
+            }
+        </div>
