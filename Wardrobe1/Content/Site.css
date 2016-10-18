@@ -22,10 +22,67 @@ select,
 textarea {
     max-width: 280px;
 }
+/*^^^^^^^^^^^^^^^^^^^^^CODE THAT WAS GENERATED^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
 
 
+#mainBG{
+    background-image:url("/Pictures/BackgroundImages/large-walk-in-closet-designs.jpg");
+    background-size:cover;
+
+}
+.jumbotron{
+    color:white;
+    text-align:center;
+    background: rgba(54, 25, 25, .5);
+}
+#jumboText{
+    font-family: 'Herr Von Muellerhoff', cursive;
+    font-size:70px;
+}
+#quoteR{
+    font-family: 'Herr Von Muellerhoff', cursive;
+}
+.navbar-brand{
+    font-family: 'Herr Von Muellerhoff', cursive;
+    font-size:30px;
+}
+#indexLink{
+    text-align:center;
+    font-size:38px;
+    color:white;
+    font-family: 'Allura', cursive;
+    letter-spacing:-1px;
+}
+#actionLink:hover{
+    text-decoration:none;
+}
+/*^^^^^^^^^^^^^^INDEX CODE^^^^^^^^^^^^^^*/
 
 img{
    height:200px;
    width:200px;
 }
+h2{
+   font-family: 'Nothing You Could Do', cursive;
+}
+.thumbnail{
+    text-align:center;
+    background-color:rgba(89, 83, 94, .5);
+    font-family:'Comic Sans MS';
+    font-size:20px;
+    color:white;
+}
+
+/*^^^^^^^^^^^^^^GENERAL CRUD TAGS^^^^^^^^^^^^^^*/
+
+
+
+
+
+
+
+
+
+
+
+
