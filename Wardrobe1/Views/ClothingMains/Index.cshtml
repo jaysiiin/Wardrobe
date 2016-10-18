@@ -34,21 +34,19 @@
                     <br/>
                         @Html.DisplayFor(modelItem => item.TopStuff.Name)
                         <img src="@Url.Content(item.TopStuff.Photo)" />
-                   
+                    <br/>
                         @Html.DisplayFor(modelItem => item.BottomStuff.Name)
                         <img src="@Url.Content(item.BottomStuff.Photo)" />
-
+                    <br/>
                         @Html.DisplayFor(modelItem => item.ShoeStuff.Name)
                         <img src="@Url.Content(item.ShoeStuff.Photo)" />
-
+                    <br/>
                         @Html.DisplayFor(modelItem => item.AccessoriesStuff.Name)
                         <img src="@Url.Content(item.AccessoriesStuff.Photo)" />
                     <br />
-
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ClothingID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.ClothingID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.ClothingID })
-                    
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ClothingID }, new { id = "crudLink" }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.ClothingID }, new { id = "crudLink" }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ClothingID }, new { id = "crudLink" })
                 </div>
             </div>
     }

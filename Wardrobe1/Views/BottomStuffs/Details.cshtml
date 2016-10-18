@@ -10,20 +10,15 @@
     <h4>BottomStuff</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dd>
+            <img src="@Url.Content(@Model.Photo)" />
+        </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Name)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Photo)
-        </dt>
-
-        <dd>
-            <img src="@Url.Content(@Model.Photo)"/>
         </dd>
 
         <dt>

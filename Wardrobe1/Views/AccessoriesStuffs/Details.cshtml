@@ -7,9 +7,13 @@
 <h2>Details</h2>
 
 <div>
-    <h4>AccessoriesStuff</h4>
+    <h4>Accessories</h4>
     <hr />
     <dl class="dl-horizontal">
+
+        <dd>
+            <img src="@Url.Content(@Model.Photo)" />
+        </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Name)
         </dt>
@@ -17,15 +21,6 @@
         <dd>
             @Html.DisplayFor(model => model.Name)
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Photo)
-        </dt>
-
-        <dd>
-            <img src="@Url.Content(@Model.Photo)" />
-        </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.Type)
         </dt>
